@@ -47,6 +47,10 @@
         number1.toFixed(2).replace('.', ',')
         // 2 casas decimais e adiciona a virgula no lugar do ponto
 
+        //monta o numero para Real
+        number1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        //para mudar a moeda, apenas precisamos mudar currency para USD por exemplo e veremos em dolares
+        
     </script>
     
 </body>
