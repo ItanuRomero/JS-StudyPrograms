@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+</head>
+<body>
+    
+    Tratando strings.
+
+    <script>
+        // guardando dados
+        var nome = window.prompt('Qual o seu nome?')
+        // eh necessario concatenar com o simbolo de adicao
+        window.alert('ola, ' + nome + ', eh um grande prazer te conhecer!!') 
+
+        var numeroDeLetras = nome.length        // quantos caracteres a string possui
+        nome.toUpperCase   // tudo para maiusculas
+        nome.toLowerCase   // tudo para minusculas
+
+
+        //tambem podemos formatar a string da seguinte forma:
+        document.write(`O seu nome e: ${nome.toUpperCase()}, correto? <br/> e possui ${numeroDeLetras} letras!`) 
+        // se chama template string e funciona apenas com crases. ``
+
+
+        //posso usar o document.write para escrever na tela em vez de mostra um alerta
+        //com writeln ele pula uma linha.
+        // posso adicionar tags html poi sera mostrado no document.
+
+
+    </script>
+
+</body>
+</html>

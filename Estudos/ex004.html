@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando dois dados</title>
+</head>
+<body>
+    <h1>Somando 2 numeros</h1>
+
+    <h2>
+    levando em consideracao a variavel n:
+    </h2>
+    convertendo uma string para number:
+
+    Number.parseInt(n)
+    Number.parseFloat(n)
+
+    ou simplesmente podemos fazer:
+    Number(n)
+    assim ele muda automaticamente.
+
+    para fazer o mesmo procedimento e transformar em uma string:
+
+    String(n)
+    n.toString()
+    <script>
+        // temos que converter o tipo da variavel, pois ela tem um tipo string, veja abaixo.
+        var number1 = Number(window.prompt('Digite um numero:'))
+        var number2 = Number(window.prompt('DIgite outro numero:'))
+
+        
+
+        var resultado = number1 + number2
+        
+
+
+        //posso transformar resultado em string
+
+        window.alert('O resultado da soma dos numeros' + number1 + ' e ' + number2 + ' eh igual a ' + String(resultado)) // dessa forma
+        //+ pode servir para adicao e para concatenacao
+        //temos que ter number + number para somar
+        //temos que ter string + string para concatenar
+
+
+        // posso fazer as casas decimais com
+        number1.toFixed(2).replace('.', ',')
+        // 2 casas decimais e adiciona a virgula no lugar do ponto
+
+    </script>
+    
+</body>
+</html>
