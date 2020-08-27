@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao DOM</title>
+
+    <style>
+        body {
+            background: rgb(2, 43, 179);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado: </p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript<p>
+    <div>Clique em mim</div>
+    
+
+    <script>
+        //DOM -> Document Object Model
+        //window eh tronco principal da arvore DOM
+        window.document.write('<br> olha ai')
+        /*
+            selecionando documentos:
+            por marca
+                getElementsByTagName()
+                mais de um objeto
+            por ID
+                getElementById()
+            por nome
+                getElementsByName()
+            por classe
+                getElementsByClassName()
+            por seletor
+                faz a selecao pelo css
+                querySelector()
+                querySelectorAll()
+        */
+       //exemplos:
+       var p1 = window.document.getElementsByTagName('p')[0]
+       //pega varios elementos entao precisamos usar colchetes
+       window.document.write('<br>' + p1.innerText)
+       //innerText pega o texto sem tags, innerHTML vem com tags
+       p1.style.background = 'blue'
+
+    </script>
+</body>
+</html>
