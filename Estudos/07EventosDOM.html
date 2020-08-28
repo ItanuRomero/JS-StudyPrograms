@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background-color: purple;
+        }
+        #area {
+            font: normal 20pt arial;
+            background-color: #c343c3;
+            width: 200px;
+            color: white;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Eventos e tudo aquilo que pode ocorrer com um elemento.
+    Checar lista de eventos da MDN -->
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseover', entrar)
+        area.addEventListener('mouseout', sair)
+        function clicar() {
+            area.innerText = 'Clicou'
+            area.style.background = 'red'
+        }
+        function entrar() {
+            area.innerText = 'Entrou'
+        }
+        function sair() {
+            area.innerText = 'Saiu'
+            area.style.background = '#c343c3'
+        }
+        //podemos identificar erros utilizando o devtools do navegador.
+        
+    </script>
+</body>
+</html>
