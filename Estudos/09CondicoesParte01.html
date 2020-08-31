@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequencias e condicoes</title>
+</head>
+<body>
+    <h1>Representando as condicoes em JS</h1>
+
+    <p>Formato: <br>if (condicao) { <br>
+        **comandos executados caso condicao seja verdadeira <br>
+    }else { <br>
+        **comandos executados caso condicao seja falsa <br>
+    }</p>
+
+
+    <h1>Tipos de condicao</h1>
+    <p>Condicao simples e condicao composta <br>
+    a simples apenas executa algo caso condicao seja verdadeira <br>
+    a composta executa se a condicao for verdadeiraou falsa.</p>
+
+    <h1>Exemplo:</h1>
+    <h2>sistema de multas</h2>
+    velocidade do carro: <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="verificar" onclick="verificacao()">
+    <div id="resultado"></div>
+    <div id="warning"></div>
+
+    <script>
+        var dado = document.getElementById('velocidade')
+
+        function verificacao() {
+
+            var dado= document.getElementById('velocidade')
+            var velocidade = Number(dado.value)
+            var div = document.getElementById('resultado')
+
+            div.innerHTML = `Sua velocidade eh: ${velocidade}Km/h<br>`
+
+            if (velocidade > 60) {
+                var div = document.getElementById('resultado')
+                div.innerHTML += 'Voce foi <strong>multado!</strong>'
+            }
+            //outra forma de fazer, diretamente pelo document.getElementById()
+            document.getElementById('warning').innerText = 'Utilize sempre o cinto de seguranca'
+        }
+    </script>
+</body>
+</html>
