@@ -1,21 +1,15 @@
 function contar() {
     
+var inicio = document.getElementById('inicio')
+var fim = document.getElementById('fim')
+var passo = document.getElementById('passo')
+var resultado = document.getElementById('resultado')
 
-var inicio = document.getElementById('inicio').value
-var fim = document.getElementById('fim').value
-var passo = document.getElementById('passo').value
-if (inicio == 0 || fim == 0 || passo == 0) {
+if (inicio.value == 0 || fim.value == 0 || passo.value == 0) {
     alert('Preencha todos os dados')
-} else {
-
-
-    var resultado = document.getElementById('resultado')
-    for (var contador = inicio; contador <= fim; contador + passo) {
-        resultado.innerHTML = `${contador} ->`
-    }
-
-    }
-
+}
+for (var contador = inicio.value; contador <= fim.value; contador + passo.value) {
+    resultado.innerHTML = `${contador} ->`
 }
 
-contar()
+}
