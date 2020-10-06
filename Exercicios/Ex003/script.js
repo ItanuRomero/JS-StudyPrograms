@@ -12,16 +12,29 @@ function contar() {
         let f = Number(fim.value)
         let p = Number(passo.value)
         if (i < f){
-        for (var contador = i; contador <= f; contador += p) {
-            resultado.innerHTML += ` ${contador} ->`
+            if (p == 0) {
+                alert('Passo 0 nao pode ser utilizado. Seguindo com passo 1.')
+                p = 1
+            }
+            for (var contador = i; contador <= f; contador += p) {
+                if (contador == f) {
+                    resultado.innerHTML += `${contador} 🏁`
+                } else {
+                resultado.innerHTML += `${contador} 👉 `
+                }
         }
         } else {
+            if (p == 0) {
+                alert('Passo 0 nao pode ser utilizado. Seguindo com passo 1.')
+                p = 1
+            }
             for (var contador1 = i; contador1 >= f; contador1 -= p) {
-                resultado.innerHTML += ` ${contador1} -> `
+                if (contador1 == f) {
+                    resultado.innerHTML += `${contador1} 🏁`
+                } else {
+                resultado.innerHTML += `${contador1} 👉 `
+                }
             }
         }
-        
     }
-    
-
 }
