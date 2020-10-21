@@ -15,6 +15,17 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px gray;
+    text-align: center;
+}
+
+section #resultado select {
+    width: 300px;
+}
+
+section #resultado select option {
+    margin-top: 10px;
+    text-align: center;
+    font-size: large;
 }
 
 footer {
