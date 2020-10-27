@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Análise de números</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Digite um número:
+                <input type="number" name="numero" id="numero">
+                <input type="button" value="Adicionar á lista" onclick="adicionaNumero()">
+            </p>
+        </div>
+        <div>
+            <select name="lista" id="selectLista" size="10">
+                <option> Entre com numeros para a lista </option>
+            </select> <br>
+            <input type="button" value="Analisar lista" onclick="analisaLista()">
+        </div>
+        <div id="apresentaAnalise">
+
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; Itanú Romero</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
