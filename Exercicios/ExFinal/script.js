@@ -8,6 +8,8 @@ function adicionaNumero() {
     } else {
         adcionaNaLista(numero)
     }
+    document.getElementById('numero').value = ''
+    document.getElementById('numero').focus()
 }
 // adiciona o numero na lista
 function adcionaNaLista(numeroAnalise) {
@@ -28,25 +30,34 @@ function adcionaNoSelect(numeroParaMostrar) {
     }
     item.text = `O numero ${numeroParaMostrar} foi adicionado a lista`
     select.appendChild(item)
+    document.getElementById('apresentaAnalise').innerHTML = ''
 }
 // analisando a lista
 function analisaLista() {
     var numerosCadastrados = lista.length
-    var maiorNumero = verificaMaiorOuMenor('maior')
-    var menorNumero = verificaMaiorOuMenor('menor')
-    var somaDosValores = somaOsValores()
-    var mediaDosValores = somaDosValores / numerosCadastrados
-    console.log(menorNumero)
+    if (numerosCadastrados == 0) {
+        alert('adicione valores antes de fazer a analise!!!')
+    } else {
+        var maiorNumero = verificaMaiorOuMenor('maior')
+        var menorNumero = verificaMaiorOuMenor('menor')
+        var somaDosValores = somaOsValores()
+        var mediaDosValores = somaDosValores / numerosCadastrados
+        var apresentacao = document.getElementById('apresentaAnalise')
+        apresentacao.innerHTML = `Analisamos a lista e segue os resultados: <br>`
+        apresentacao.innerHTML += `Foram cadastrados ${numerosCadastrados} números. <br>`
+        apresentacao.innerHTML += `O maior numero é: ${maiorNumero}, e o menor: ${menorNumero} <br>`
+        apresentacao.innerHTML += `A soma dos valores é: ${somaDosValores}, e a média: ${mediaDosValores}`
+    }
 }
 
 function verificaMaiorOuMenor(qual) {
     let maior = 0
-    let menor = 0
+    let menor = 101
     for (var valor in lista) {
         if (lista[valor] > maior) {
             maior = lista[valor]
         }
-        if (lista[valor] < menor || lista[valor] == 0) {
+        if (lista[valor] < menor) {
             menor = lista[valor]
         }
     }
